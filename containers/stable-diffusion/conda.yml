@@ -2,5 +2,14 @@ name: stable-diffusion-nf
 channels:
   - defaults
   - conda-forge
+  - pytorch-lts
+  - anaconda
 dependencies:
   - huggingface_hub
+  - pytorch
+  - torchvision
+  - tqdm
+  - pillow
+  - matplotlib
+  - numpy
+
