@@ -1,0 +1,6 @@
+name: stable-diffusion-nf
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - huggingface_hub
