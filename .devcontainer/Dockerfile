@@ -24,7 +24,8 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
 
 
-RUN wget -q0- https://get.nextflow.io | bash && mv nextflow /usr/local/bin/
+RUN wget -qO- https://get.nextflow.io | bash
+RUN mv nextflow /usr/local/bin/
 
 #COPY library-scripts/github-debian.sh /tmp/library-scripts/
 #RUN apt-get update && bash /tmp/library-scripts/github-debian.sh
