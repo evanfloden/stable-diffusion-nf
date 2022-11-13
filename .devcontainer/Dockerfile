@@ -25,5 +25,6 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 
 
 RUN wget -q0- https://get.nextflow.io | bash && mv nextflow /usr/local/bin/
-COPY library-scripts/github-debian.sh /tmp/library-scripts/
-RUN apt-get update && bash /tmp/library-scripts/github-debian.sh
+
+#COPY library-scripts/github-debian.sh /tmp/library-scripts/
+#RUN apt-get update && bash /tmp/library-scripts/github-debian.sh
