@@ -4,8 +4,11 @@ channels:
   - conda-forge
   - pytorch-lts
   - anaconda
+  - huggingface
 dependencies:
   - huggingface_hub
+  - transformers
+  - diffusers==0.2.4
   - pytorch
   - torchvision
   - tqdm

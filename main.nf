@@ -2,7 +2,7 @@
 process INFERENCE {
 
     secret 'HUGGINGFACE_HUB_TOKEN'
-    container 'evanfloden/stable-diffusion-nf'
+    container 'evanfloden/stable-diffusion-nf:v0.1'
 
     script:
     """
