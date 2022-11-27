@@ -14,17 +14,17 @@
                 "prompt": {
                     "type": "string",
                     "default": "A portrait of Barak Obama wearing a gold suit in a desert environment by Matt Fraction",
-                    "fa_icon": "far fa-comment-dots"
+                    "fa_icon": "fa-regular fa-comment"
                 },
                 "height": {
                     "type": "string",
                     "default": "760",
-                    "fa_icon": "far fa-comment-dots"
+                    "fa_icon": "fas fa-comment-dots"
                 },
                 "width": {
                     "type": "string",
                     "default": "760",
-                    "fa_icon": "far fa-comment-dots"
+                    "fa_icon": "fas fa-comment-dots"
                 }
             }
         }
