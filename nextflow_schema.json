@@ -12,12 +12,12 @@
         },
         "height": {
             "type": "string",
-            "default": "756",
+            "default": "760",
             "fa_icon": "fas fa-arrows-alt-v"
         },
         "width": {
             "type": "string",
-            "default": "756",
+            "default": "760",
             "fa_icon": "fas fa-arrows-alt-h"
         }
     }

@@ -1,8 +1,8 @@
 nextflow.enable.dsl=2
 
 params.prompt = "Picture of Darth Vader eating broccoli pizza"
-params.height = 756
-params.width = 756
+params.height = 760
+params.width = 760
 params.outdir = 'results'
 
 process INFERENCE {
