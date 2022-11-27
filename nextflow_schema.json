@@ -20,18 +20,17 @@
                     "type": "string",
                     "description": "Height of image. Must be divisable by 8.",
                     "default": "760",
-                    "fa_icon": "fas fa-arrows-w"
+                    "fa_icon": "fas fa-arrows-alt-v"
                 },
                 "width": {
                     "type": "string",
                     "description": "Width of image. Must be divisable by 8.",
                     "default": "760",
-                    "fa_icon": "fas fa-arrows-left-right-to-line"
+                    "fa_icon": "fas fa-arrows-alt-h"
                 }
             }
         }
     },
-
     "allOf": [
         {
             "$ref": "#/definitions/input_options"
