@@ -13,7 +13,7 @@
             "properties": {
                 "prompt": {
                     "type": "string",
-                    "default": "A portrait of Barak Obama wearing in a scenic environment by Adi Granov",
+                    "default": "A portrait of Barak Obama wearing a bow tie in a scenic environment by Adi Granov",
                     "fa_icon": "fas fa-comment-dots"
                 },
                 "height": {
