@@ -1,0 +1,3 @@
+reports:
+  image.png:
+    display: "Stable Diffusion result"
