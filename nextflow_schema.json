@@ -22,3 +22,9 @@
         }
     }
 }
+
+"allOf": [
+    {
+        "$ref": "#/definitions/prompt"
+    }
+]
