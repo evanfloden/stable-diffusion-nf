@@ -26,7 +26,7 @@
                     "type": "string",
                     "description": "Width of image. Must be divisable by 8.",
                     "default": "760",
-                    "fa_icon": "fas fa-arrows-h"
+                    "fa_icon": "fa-solid fa-arrows-left-right-to-line"
                 }
             }
         }
