@@ -7,7 +7,7 @@ cd
 # install Nextflow and add huggingface secret
 wget -qO- https://get.nextflow.io | bash
 sudo mv nextflow /usr/local/bin/
-nextflow secrets put HUGGINGFACE_HUB_TOKEN ${HF_TOKEN}
+nextflow secrets set HUGGINGFACE_HUB_TOKEN ${HF_TOKEN}
 
 # run worflow
 nextflow run main.nf 
