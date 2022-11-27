@@ -12,6 +12,9 @@ process INFERENCE {
     input:
     tuple val(prompt), val(height), val(width)
 
+    output:
+    path("image.png")
+
     script:
     """
     python3 -c "from huggingface_hub.hf_api import HfFolder; HfFolder.save_token('\$HUGGINGFACE_HUB_TOKEN')"
