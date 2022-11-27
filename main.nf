@@ -1,3 +1,5 @@
+nextflow.enable.dsl=2
+
 params.prompt = "3D DNA exiting cell"
 params.height = 512
 params.width = 512
