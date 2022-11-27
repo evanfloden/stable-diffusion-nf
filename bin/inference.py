@@ -13,9 +13,6 @@ print("Size: $h x $ w")
 model_id = "stabilityai/stable-diffusion-2"
 
 #scheduler = EulerDiscreteScheduler.from_pretrained(model_id, subfolder="scheduler")
-
-exit()
-
 pipe = StableDiffusionPipeline.from_pretrained(model_id) #, scheduler=scheduler,revision="fp16", torch_dtype=torch.float16) 
 pipe = pipe.to("cuda")
 
