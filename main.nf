@@ -1,6 +1,6 @@
 nextflow.enable.dsl=2
 
-params.prompt = "Picture of Darth Vader eating broccoli pizza"
+params.prompt = "A portrait of Barak Obama wearing a bow tie in a scenic environment by Adi Granov"
 params.height = 760
 params.width = 760
 params.outdir = 'results'
