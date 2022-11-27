@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
     "$id": "https://raw.githubusercontent.com/nf-core/rnaseq/master/nextflow_schema.json",
-    "title": "nf-core/rnaseq pipeline parameters",
-    "description": "RNA sequencing analysis pipeline for gene/isoform quantification and extensive quality control.",
+    "title": "stabe-diffusion-nf parameters",
+    "description": "Stable Diffusion pipeline in Nextflow",
     "type": "object",
     "definitions": {
         "input_options": {
@@ -13,7 +13,7 @@
             "properties": {
                 "prompt": {
                     "type": "string",
-                    "default": "Picture of Darth Vader eating broccoli pizza",
+                    "default": "A portrait of Barak Obama wearing a gold suit in a desert environment by Matt Fraction",
                     "fa_icon": "far fa-comment-dots"
                 },
                 "height": {
@@ -25,9 +25,9 @@
                     "type": "string",
                     "default": "760",
                     "fa_icon": "far fa-comment-dots"
-                },
-            },
-        },
+                }
+            }
+        }
     },
 
     "allOf": [
