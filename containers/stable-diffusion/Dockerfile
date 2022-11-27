@@ -1,9 +1,7 @@
-FROM continuumio/miniconda3:4.10.3
+FROM debian:stable-slim
 
-COPY conda.yml .
-RUN \
-   pip install transformers diffusers lpips \
-&& conda env update -n root -f conda.yml \
-&& conda clean -a
+RUN apt-get update && \
+    apt-get install -y git procps python3-pip
 
-RUN apt-get install -y procps
+RUN pip install \
+        transformers diffusers accelerate scipy
