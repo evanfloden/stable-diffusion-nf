@@ -1,8 +1,8 @@
 nextflow.enable.dsl=2
 
 params.prompt = "A portrait of Barak Obama wearing a bow tie in a scenic environment by Adi Granov"
-params.height = 760
-params.width = 760
+params.height = 16
+params.width = 16
 params.outdir = 'results'
 
 process INFERENCE {
@@ -15,7 +15,7 @@ process INFERENCE {
     tuple val(prompt), val(height), val(width)
 
     output:
-    path("image.png")
+    path("*.png")
 
     script:
     """
