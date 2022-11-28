@@ -23,7 +23,7 @@ first_chars = clean_sample_str[0:29].replace(" ", "_")
 dt_now = datetime.now()
 time_stamp = datetime.timestamp(dt_now)
 date_time = datetime.fromtimestamp(time_stamp)
-str_date_time = date_time.strftime("%Y%m%d%H%M")
+str_date_time = date_time.strftime("%Y%m%d%H%M%S")
 
 image_name = str_date_time + "_" + first_chars + ".png"
 
