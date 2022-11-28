@@ -16,6 +16,12 @@
                     "default": "A portrait of Barak Obama wearing a bow tie in a scenic environment by Adi Granov",
                     "fa_icon": "fas fa-comment-dots"
                 },
+                "images": {
+                    "type": "string",
+                    "description": "Number of images to generate",
+                    "default": "3",
+                    "fa_icon": "fas fa-arrows-alt-v"
+                },
                 "height": {
                     "type": "string",
                     "description": "Height of image. Must be divisable by 8.",
@@ -35,11 +41,5 @@
         {
             "$ref": "#/definitions/input_options"
         }
-    ],
-    "properties": {
-        "outdir": {
-            "type": "string",
-            "default": null
-        }
-    }
+    ]
 }
