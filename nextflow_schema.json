@@ -35,5 +35,11 @@
         {
             "$ref": "#/definitions/input_options"
         }
-    ]
+    ],
+    "properties": {
+        "outdir": {
+            "type": "string",
+            "default": null
+        }
+    }
 }
