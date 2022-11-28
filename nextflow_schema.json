@@ -17,10 +17,12 @@
                     "fa_icon": "fas fa-comment-dots"
                 },
                 "images": {
-                    "type": "string",
+                    "type": "integer",
                     "description": "Number of images to generate",
                     "default": "3",
-                    "fa_icon": "fas fa-arrows-alt-v"
+                    "fa_icon": "fas fa-hashtag",
+                    "minimum": 1,
+                    "maximum": 25
                 },
                 "height": {
                     "type": "string",
