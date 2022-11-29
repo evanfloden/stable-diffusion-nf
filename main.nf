@@ -28,20 +28,23 @@ process INFERENCE {
     import string
     from huggingface_hub import HfFolder
 
-    print("Hello World")
+    # Save Huggingface API token 
     HfFolder.save_token("\$HUGGINGFACE_HUB_TOKEN") 
 
+    # Stable Diffusion parameters
     model_id   = "stabilityai/stable-diffusion-2"
     scheduler  = EulerDiscreteScheduler.from_pretrained(model_id, subfolder="scheduler")
     pipe       = StableDiffusionPipeline.from_pretrained(model_id, scheduler=scheduler, revision="fp16", torch_dtype=torch.float16, safety_checker=None) 
     pipe       = pipe.to("cuda")
 
+    # Define image filename
     prompt      = "$prompt"
     prompt_str  = prompt.translate(str.maketrans('', '', string.punctuation))
     first_chars = prompt_str[0:29].replace(" ", "_")
     seed        = "$seed"
     image_name  = seed + "_" + first_chars + ".png"
 
+    # Generate image
     print(image_name)
     image       = pipe(prompt, height=$height, width=$width).images[0]
     image.save(image_name)
