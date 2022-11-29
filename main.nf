@@ -21,10 +21,10 @@ process INFERENCE {
     script:
     """
     #!/usr/bin/env python3
+
+    # Import
     import torch
     from diffusers import StableDiffusionPipeline, EulerDiscreteScheduler
-    import sys
-    from datetime import datetime
     import string
     from huggingface_hub import HfFolder
 
@@ -45,7 +45,6 @@ process INFERENCE {
     image_name  = seed + "_" + first_chars + ".png"
 
     # Generate image
-    print(image_name)
     image       = pipe(prompt, height=$height, width=$width).images[0]
     image.save(image_name)
     """
