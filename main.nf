@@ -53,7 +53,7 @@ workflow {
     // Create a channel containing N random seeds
     Channel
         .of(1..100000)
-        .randomSample(params.images)
+        .randomSample(params.images.toInteger())
         .set{images_ch}
 
     // Combine prompt with N random seeds
