@@ -16,7 +16,7 @@ process INFERENCE {
     tuple val(prompt), val(height), val(width), val(seed)
 
     output:
-    path("image_name")
+    path("*.png")
 
     script:
     """
