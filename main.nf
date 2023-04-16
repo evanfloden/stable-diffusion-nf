@@ -1,15 +1,16 @@
 nextflow.enable.dsl=2
 
-params.prompt = "A portrait of Barak Obama wearing a bow tie in a scenic environment by Adi Granov"
+params.prompt = "Picture of Darth Vader eating broccoli pizza"
 params.height = 760
 params.width = 760
-params.images = 5
 params.outdir = 'results'
+params.images = 10
 
 process INFERENCE {
 
-    secret 'HUGGINGFACE_HUB_TOKEN'
-    container 'evanfloden/stable-diffusion-nf:v0.1'
+    secret 'HUGGINGFACE_HUB_TOKEN' 
+
+    container 'storytek/stable-diffusion-nf:latest'
     publishDir "$params.outdir"
 
     input:
@@ -21,7 +22,7 @@ process INFERENCE {
     script:
     """
     #!/usr/bin/env python3
-
+ 
     # Import
     import torch
     from diffusers import StableDiffusionPipeline, EulerDiscreteScheduler
@@ -43,12 +44,31 @@ process INFERENCE {
     first_chars = prompt_str[0:29].replace(" ", "_")
     seed        = "$seed"
     image_name  = seed + "_" + first_chars + ".png"
-
     # Generate image
     image       = pipe(prompt, height=$height, width=$width).images[0]
     image.save(image_name)
     """
 }
+
+process MERGE {
+
+    container 'storytek/imagemagick:latest'
+    publishDir "$params.outdir"
+
+    input:
+    path 'image'
+
+    output:
+    path("*.png")
+
+    """
+    touch results.txt
+    echo image* >> results.txt
+    montage image* mosaic.png 
+    """
+
+}
+
 
 workflow {
 
@@ -64,6 +84,8 @@ workflow {
         .combine(images_ch)
         .set{stable_diffusion_ch}
 
-    INFERENCE(stable_diffusion_ch)
+    INFERENCE(stable_diffusion_ch) \
+        | collect \
+        | MERGE
 
 }
