@@ -1,6 +1,12 @@
 nextflow.enable.dsl=2
 
-params.prompt = "Picture of Darth Vader eating broccoli pizza"
+params.prompt = '''\
+Pixar style female scientist in lab, 4k, 8k, unreal engine, octane render photorealistic by 
+cosmicwonder, hdr, photography by cosmicwonder, high definition, symmetrical face, 
+volumetric lighting, dusty haze, photo, octane render, 24mm, 4k, 24mm, DSLR, 
+high quality, 60 fps, ultra realistic
+'''
+
 params.height = 760
 params.width = 760
 params.outdir = 'results'
@@ -33,7 +39,7 @@ process INFERENCE {
     HfFolder.save_token("\$HUGGINGFACE_HUB_TOKEN") 
 
     # Stable Diffusion parameters
-    model_id   = "stabilityai/stable-diffusion-2"
+    model_id   = "stabilityai/stable-diffusion-2-1"
     scheduler  = EulerDiscreteScheduler.from_pretrained(model_id, subfolder="scheduler")
     pipe       = StableDiffusionPipeline.from_pretrained(model_id, scheduler=scheduler, revision="fp16", torch_dtype=torch.float16, safety_checker=None) 
     pipe       = pipe.to("cuda")
