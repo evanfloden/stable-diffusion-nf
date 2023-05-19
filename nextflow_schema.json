@@ -13,7 +13,7 @@
             "properties": {
                 "prompt": {
                     "type": "string",
-                    "default": "A portrait of Barak Obama wearing a bow tie in a scenic environment by Adi Granov",
+                    "default": "Pixar style female scientist in lab, 4k, 8k, unreal engine, octane render photorealistic by cosmicwonder, hdr, photography by cosmicwonder, high definition, symmetrical face, volumetric lighting, dusty haze, photo, octane render, 24mm, 4k, 24mm, DSLR, high quality, 60 fps, ultra realistic",
                     "fa_icon": "fas fa-comment-dots"
                 },
                 "images": {
